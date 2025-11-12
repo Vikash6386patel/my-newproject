@@ -1,13 +1,13 @@
 <style>
-  .search-btn{
+  .search-btn {
     background-color: #fe424d;
-  color: #fff;
-  border-radius: 20px;
-  padding: 0 1rem 0 1rem;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 1rem 0 1rem;
   }
-  .search-btn:hover{
+  .search-btn:hover {
     background-color: #fe424d;
-  color: #fff;
+    color: #fff;
   }
   .search-btn i {
     display: inline;
@@ -44,19 +44,20 @@
             class="form-control me-2 search-inp"
             type="search"
             placeholder="Search destinations"
-            
           />
-          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
         </form>
       </div>
 
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Airbnb your home</a>
-        <% if(!User) { %>
+
+        <% if(!currUser) { %>
         <a class="nav-link" href="/signup"><b>Sign Up</b></a>
         <a class="nav-link" href="/login"><b>Log In</b></a>
-        <% } %>
-        <% if(currUser) { %>
+        <% } else { %>
         <a class="nav-link" href="/logout"><b>Log Out</b></a>
         <% } %>
       </div>
